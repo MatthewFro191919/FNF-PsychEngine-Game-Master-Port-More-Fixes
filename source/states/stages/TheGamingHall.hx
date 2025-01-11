@@ -122,6 +122,10 @@ class TheGamingHall extends BaseStage
 
 		if (SONG.song.toLowerCase() == 'merriment' || SONG.song.toLowerCase() == 'games' || SONG.song.toLowerCase() == 'jovial')
                 {
+                }
+		switch (songName)
+		{
+			case 'merriment':
 			entityBFMonster();
 			vignette.setGraphicSize(Std.int(hearts.width * 2.15));
 			vignette.color = FlxColor.PINK;
@@ -129,7 +133,25 @@ class TheGamingHall extends BaseStage
 			{
 				JSActive = true;
 		        }
-                }
+			case 'games':
+			entityBFMonster();
+			vignette.setGraphicSize(Std.int(hearts.width * 2.15));
+			vignette.color = FlxColor.PINK;
+			if (bfEntity.x <= jumpDis)
+			{
+				JSActive = true;
+		        }
+			case 'jovial':
+			entityBFMonster();
+			vignette.setGraphicSize(Std.int(hearts.width * 2.15));
+			vignette.color = FlxColor.PINK;
+			frontGaming.color = FlxColor.PURPLE;
+			behindGaming.color = 0xFF823C25;
+			if (bfEntity.x <= jumpDis)
+			{
+				JSActive = true;
+		        }
+		}
 	}
 
 	// some custom below
