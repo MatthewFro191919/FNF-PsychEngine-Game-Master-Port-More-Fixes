@@ -120,9 +120,6 @@ class TheGamingHall extends BaseStage
 			frontGaming.setGraphicSize(Std.int(frontGaming.width * 1.5));
 			add(frontGaming);
 
-		if (SONG.song.toLowerCase() == 'merriment' || SONG.song.toLowerCase() == 'games' || SONG.song.toLowerCase() == 'jovial')
-                {
-                }
 		switch (songName)
 		{
 			case 'merriment':
