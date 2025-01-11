@@ -123,7 +123,6 @@ class TheGamingHall extends BaseStage
 		switch (songName)
 		{
 			case 'merriment':
-			entityBFMonster();
 			vignette.setGraphicSize(Std.int(hearts.width * 2.15));
 			vignette.color = FlxColor.PINK;
 			if (bfEntity.x <= jumpDis)
@@ -131,7 +130,6 @@ class TheGamingHall extends BaseStage
 				JSActive = true;
 		        }
 			case 'games':
-			entityBFMonster();
 			vignette.setGraphicSize(Std.int(hearts.width * 2.15));
 			vignette.color = FlxColor.PINK;
 			if (bfEntity.x <= jumpDis)
@@ -139,7 +137,6 @@ class TheGamingHall extends BaseStage
 				JSActive = true;
 		        }
 			case 'jovial':
-			entityBFMonster();
 			vignette.setGraphicSize(Std.int(hearts.width * 2.15));
 			vignette.color = FlxColor.PINK;
 			frontGaming.color = FlxColor.PURPLE;
@@ -155,12 +152,6 @@ class TheGamingHall extends BaseStage
 
 	function entityBFMonster():Void // a kiler
 	{
-		if (!swapHealth && healthBar.percent < 45 || swapHealth == true && healthBar.percent > 64)
-		{
-			tvActive = true;
-			screenStatics.animation.play('tvCorrupt');
-			bfEntity.alpha = randomRangeFloat(0.4, 0.8);
-		}
 		if (!swapHealth && healthBar.percent > 46 || swapHealth == true && healthBar.percent < 65)
 		{
 			tvActive = false;
